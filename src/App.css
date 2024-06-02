@@ -5,16 +5,20 @@ body {
   box-sizing: border-box;
 }
 
+
 div {
-  padding: 20px;
+  padding: 0px;
 }
 
 h1 {
   font-size: 2em;
 }
 
-form div {
-  margin-bottom: 10px;
+
+
+.project-name{
+  display: flex;
+  align-items: baseline;
 }
 
 form label {
@@ -48,6 +52,17 @@ a {
 
 a:hover {
   color: #007bff;
+}
+
+.profile-photo{
+  height : 200px;
+  width : 200px;
+  border : 1px solid black;
+  border-radius : 50%;
+}
+
+.home{
+  padding : 50px 250px;
 }
 
 @media (max-width: 600px) {
