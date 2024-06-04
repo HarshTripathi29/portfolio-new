@@ -1,10 +1,11 @@
 import React from 'react';
 import { GitHub, Instagram, Twitter, Email } from '@material-ui/icons';
 import '../App.css';
+import './style.css'
 
 const SocialLinks = () => {
   return (
-    <div>
+    <div className='socials'>
       <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><GitHub /></a>
       <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><Instagram /></a>
       <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"><Twitter /></a>

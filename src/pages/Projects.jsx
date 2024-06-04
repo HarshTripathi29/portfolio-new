@@ -27,7 +27,7 @@ export const projectsData = [
     name: 'CineFlix',
     stack : 'HTML, CSS, JS, React.js, Firebase',
     features: 'Features: Bill splitting, expense tracking, real-time data synchronization.',
-    description: 'Description for Project 2',
+    description: 'Developed a comprehensive Task Management Kanban Board application utilizing the MERN stack React.js and Firebase Authentication. This web application enables users to manage tasks efficiently within multiple workspaces and boards, providing a seamless and user-friendly experience',
     logo: 'https://via.placeholder.com/150', // Replace with actual project logo URL
     githubLink: 'https://github.com/project2' // Replace with actual GitHub link
   },
@@ -77,15 +77,18 @@ const ProjectLogo = styled.img`
 
 const ProjectName = styled.h3`
   margin-bottom: 10px;
-  margin-left : 20px;
+
+  font-size : 18px;
 `;
 
 const ProjectDescription = styled.p`
   margin-bottom: 10px;
+  font-size : 15px;
 `;
 
 const ProjectFeatures = styled.p`
   margin-bottom: 10px;
+  font-size : 15px;
 `;
 
 const ProjectStack = styled.p`
@@ -100,6 +103,12 @@ const GitHubLink = styled.a`
   margin-left: 20px;
 `;
 
+const CardUpper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
 
 const Projects = () => {
   return (
@@ -108,16 +117,16 @@ const Projects = () => {
       <ProjectsContainer>
         {projectsData.map((project) => (
           <ProjectCard key={project.id}>
-            <div className='project-name'>
-              <ProjectLogo src={project.logo} alt={project.name} />
-              <ProjectName>{project.name}</ProjectName>
-            </div>
-              <GitHubLink href={project.githubLink} target="_blank" rel="noopener noreferrer">
+          <CardUpper>          
+            <ProjectName>{project.name}</ProjectName>   
+            <div className='project-logo'>    
+            <GitHubLink href={project.githubLink} target="_blank" rel="noopener noreferrer">
               <GitHub />
-            </GitHubLink>
-            
+            </GitHubLink>   
+            <ProjectLogo src={project.logo} alt={project.name} />  
+            </div>
+            </CardUpper>         
             <div>
-              
               <ProjectStack>{project.stack}</ProjectStack>
               <ProjectFeatures>{project.features}</ProjectFeatures>
               <ProjectDescription>{project.description}</ProjectDescription>

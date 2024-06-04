@@ -23,7 +23,7 @@ const HeaderContainer = styled.header`
   height : 9vh;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0px;
   background: ${(props) => props.theme.background};
   color: ${(props) => props.theme.color};
   z-index: 1000;
@@ -41,8 +41,8 @@ const NameContainer = styled.div`
 const SliderContainer = styled.div`
   position: relative;
   display: flex;
-  padding : 5px;
-  gap: 5px;
+  padding : 5px 10px;
+  gap: 15px;
   border: 2px solid ${(props) => props.theme.color};
   border-radius : 30px;
 `;
@@ -50,8 +50,8 @@ const SliderContainer = styled.div`
 const NavLink = styled(Link)`
   position: relative;
   padding: 10px;
-  border: 2px solid ${(props) => props.theme.color};
-  border-radius : 20px;
+  border: none;
+  border-radius : 30px;
   text-decoration: none;
   color: inherit;
   z-index: 1;
@@ -61,11 +61,11 @@ const Slider = styled(motion.div)`
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 7%;
-  width: 10%;
-  border-radius : 20px;
+  height: 100%;
+  width: 33%;
+  border-radius : 30px;
   background: ${(props) => props.theme.color};
-  opacity : 50%;
+  opacity : 60%;
   z-index: 0;
 `;
 

@@ -15,7 +15,7 @@ const ProjectsSection = styled.div`
   justify-content : center;
   align-items: center;
   margin: 100px;
-  width : 60%;
+  width : 70%;
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -27,7 +27,7 @@ const ProjectCard = styled(motion.div)`
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content : left;
 `;
 
 const CardUpper = styled.div`
@@ -60,7 +60,8 @@ const ProjectName = styled.h2`
 `;
 
 const ProjectDescription = styled.p`
-  text-align: center;
+  text-align: left;
+  font-size : 14px;
 `;
 
 const LoadMoreButton = styled.button`
@@ -71,6 +72,8 @@ const LoadMoreButton = styled.button`
   cursor: pointer;
   border-radius: 5px;
   margin-top: 20px;
+  font-size : 16px;
+  font-weight : 600;
 `;
 
 
@@ -88,11 +91,11 @@ const Home = () => {
       <motion.h1 
         initial={{ x: '-100vw' }} 
         animate={{ x: 0 }} 
-        transition={{ type: 'spring', stiffness: 50 }}>
-        Welcome to My Portfolio
-      </motion.h1>
-      
-      <div style={{ fontSize: '1.5rem', marginTop: '20px' }}>
+        transition={{ type: 'spring', stiffness: 50 }}
+        className="title">
+        Hey, I'm <br/>Harsh 
+       </motion.h1>
+      <div className="intro" >
         I am a{' '}
         <motion.span initial="hidden" animate="visible" variants={{
           hidden: { opacity: 0 },
@@ -114,13 +117,15 @@ const Home = () => {
           ))}
         </motion.span>
       </div>
-      <p>Pursuing a Bachelor's degree in Computer Science at GLA University, my academic focus centers on coursework related to software development, data structures, and algorithms. Actively participating in coding competitions has allowed me to showcase my passion for programming and problem-solving. With a keen interest in full-stack web development, especially using the MERN stack, I am eager to leverage my skills in a dynamic professional setting.</p>
-
+      <div className='intro2'>
+      <p >I develop front-end web apps/tools and occasionally take on freelance projects.</p>
+      </div>
       <SocialLinks />
       <SkillsList />
-     
-
       <ProjectsSection>
+      <div>
+        <h1>Projects</h1>
+      </div>
         {projectsData.slice(0, 3).map((project, index) => (
           <ProjectCard
             key={project.id}
@@ -140,8 +145,6 @@ const Home = () => {
         ))}
         <LoadMoreButton onClick={handleLoadMore}>Load More</LoadMoreButton>
       </ProjectsSection>
-
-
       <ContactForm />
       <div>
         <h2>Thanks for visiting!</h2>

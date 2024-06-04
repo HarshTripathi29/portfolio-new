@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family :Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,11 +14,11 @@ h1 {
   font-size: 2em;
 }
 
-
-
-.project-name{
+.project-logo{
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 form label {
@@ -62,7 +62,23 @@ a:hover {
 }
 
 .home{
-  padding : 50px 250px;
+  padding : 50px 350px;
+}
+
+.title{
+  font-size: 80px;
+  font-weight : 800px;
+  margin-top: 80px;
+}
+
+.intro{
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.intro2{
+  font-size: 24px;
+  font-weight: 500;
 }
 
 @media (max-width: 600px) {
